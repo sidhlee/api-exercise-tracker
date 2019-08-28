@@ -1,0 +1,31 @@
+{
+  "name": "api_exercise_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "12.4.0"
+  },
+  "dependencies": {
+    "dotenv": "8.1.0",
+    "express": "4.17.1",
+    "mongodb": "3.3.1",
+    "mongoose": "5.6.10",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "shortid": "2.2.14"
+  },
+  "repository": {
+    "git": "https://github.com/toypiano/api-exercise-tracker.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb"
+  ]
+}

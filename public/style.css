@@ -1,0 +1,89 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+    color: #eee;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 370px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+    margin: auto;
+}
+
+#user-info {
+    width: 100%;
+    height: 4em;
+    border: 1px solid #888;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, button {
+    
+    font-size: 1em;
+    padding: 0.4em;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: rgb(53, 98, 53);
+    color: #eee;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(50, 119, 50);
+}
+
+#get-user-log input[type="date"] {
+    width: 1600px;
+}
+
+#from-to {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.log {
+    width: 100%;
+    min-height: 10em;
+    overflow: auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-item {
+    border-top: solid 1px rgb(53, 98, 53);
+}
+
+.log-items {
+    text-transform: capitalize;
+}

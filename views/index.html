@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercise Tracker</title>
+    <link rel="shortcut icon" type="image/x-icon" href="toypiano.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="exercise-tracker">
+            <header>
+                <h1>Exercise Tracker</h1>
+            </header>
+            <form id="new-user" method="post" action="/api/exercise/new-user">
+                <h3>Create a New User</h3>
+                <input id="username" type="text" name="username" placeholder="username" required>
+                <button type="submit">Submit</button>
+            </form>
+            <section class="user-info">
+                <header>
+                    <div id="user-info"></div>
+                </header>
+                <form id="add-exercise" action="api/exercise/add" method="post">
+                    <h3>Add exercise</h3>
+                    <input id="userId" type="text" name="userId" placeholder="userId*" required>
+                    <input id="description" type="text" name="description" placeholder="description*" required>
+                    <input id="duration" type="number" min="1" name="duration" placeholder="duration* (mins.)" required>
+                    <input id="duration" type="date" name="date" placeholder="date (yyyy-mm-dd)">
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <form id="get-user-log" action="api/exercise/log" method="get">
+                <h3>GET user's exercise log</h3>
+                <input id="get-userid" type="text" name="userId" placeholder="userID(required)" required>
+                <div id="from-to">
+                    <input id="from" name="from" placeholder="from: yyyy-mm-dd">
+                    <input id="to" name="to" placeholder="to: yyyy-mm-dd">
+                </div>
+                <input id="limit" type="number" name="limit" min="1" placeholder="Display Limit">
+                <button type="submit">Submit</button>
+            </form>
+            <section class="log">
+                <div id="log"></div>
+            </section>
+        </main>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="./client.js"></script>
+</body>
+
+</html>
